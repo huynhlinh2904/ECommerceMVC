@@ -1,3 +1,3 @@
 # ECommerceMVC
 # Reference
-<a href="[http://nestjs.com/](https://www.youtube.com/@HIENLTH)"/><a>
+<a href="https://www.youtube.com/@HIENLTH"/><a>
