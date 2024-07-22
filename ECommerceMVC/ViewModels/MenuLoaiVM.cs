@@ -1,4 +1,5 @@
-﻿namespace ECommerceMVC.ViewComponents.ViewModels
+﻿namespace ECommerceMVC.ViewModels
+
 {
     public class MenuLoaiVM
     {

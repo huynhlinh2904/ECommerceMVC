@@ -1,4 +1,5 @@
 ﻿using ECommerceMVC.Data;
+using ECommerceMVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ECommerceMVC.ViewComponents
@@ -10,13 +11,13 @@ namespace ECommerceMVC.ViewComponents
 
         public IViewComponentResult Invoke()
         {
-            var data = db.Loais.Select(loai => new
+            var data = db.Loais.Select(loai => new MenuLoaiVM
             {
-                loai.MaLoai,
-                loai.TenLoai,
-                soluong = loai.HangHoas.Count
-            }).ToList();
-            return View();
+                maLoai = loai.MaLoai,
+                tenLoai = loai.TenLoai,
+                soLuong = loai.HangHoas.Count
+            }).OrderBy(p => p.tenLoai);
+            return View(data); // default cshtml
         }
 
 
